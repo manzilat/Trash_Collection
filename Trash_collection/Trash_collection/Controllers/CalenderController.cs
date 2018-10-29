@@ -7,31 +7,30 @@ using Trash_collection.Models;
 
 namespace Trash_collection.Controllers
 {
-    public class EmployeeController : Controller
+    public class CalenderController : Controller
     {
+
         private ApplicationDbContext db = new ApplicationDbContext();
 
-      //  GET: Employees
+        // GET: Calenders
         public ActionResult Index()
         {
-            return View(db.Employees.ToList());
+            return View(db.Calender.ToList());
         }
 
-    
-
-        // GET: Employee/Details/5
+        // GET: Calender/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Employee/Create
+        // GET: Calender/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Employee/Create
+        // POST: Calender/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -47,13 +46,13 @@ namespace Trash_collection.Controllers
             }
         }
 
-        // GET: Employee/Edit/5
+        // GET: Calender/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Employee/Edit/5
+        // POST: Calender/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -69,13 +68,13 @@ namespace Trash_collection.Controllers
             }
         }
 
-        // GET: Employee/Delete/5
+        // GET: Calender/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Employee/Delete/5
+        // POST: Calender/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

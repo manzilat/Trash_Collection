@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -14,7 +15,9 @@ namespace Trash_collection.Models
         [Display(Name = "Customer First Name")]
         public string FirstName { get; set; }
         [Display(Name = "Customer Last Name")]
+        
         public string LastName { get; set; }
+        [ForeignKey("Street Address")]
         [Display(Name = "Street Address")]
         public string Address { get; set; }
         [Display(Name = "City")]
