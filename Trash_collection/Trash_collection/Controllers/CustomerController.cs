@@ -12,11 +12,11 @@ namespace Trash_collection.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Customer
-        public ActionResult Index()
-        {
-            var customers = db.Customer.Include(c => c.ApplicationUsers);
-            return View(customers.ToList());
-        }
+        //public ActionResult Index()
+        //{
+        //    //var customers = db.Customers(c => c.ApplicationUsers);
+        //   // return View(customers.ToList());
+        //}
 
         // GET: Customer/Details/5
         public ActionResult Details(int id)

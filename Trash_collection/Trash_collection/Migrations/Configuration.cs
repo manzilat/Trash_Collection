@@ -21,7 +21,7 @@ namespace Trash_collection.Migrations
 
 
             context.Roles.AddOrUpdate(
-                  p => p.FullName,
+                  n => n.Name,
                  new Microsoft.AspNet.Identity.EntityFramework.IdentityRole { Name = "Employee" },
                new Microsoft.AspNet.Identity.EntityFramework.IdentityRole { Name = "Customer" });
                 

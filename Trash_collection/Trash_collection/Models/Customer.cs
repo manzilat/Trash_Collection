@@ -9,12 +9,17 @@ namespace Trash_collection.Models
     public class Customer
     {
         [Key]
-        public int CustomerID { get; set; }
+        public int ID { get; set; }
        
-        [Display(Name = "Customer Account Name")]
-        public string AccountName { get; set; }
+        [Display(Name = "Customer First Name")]
+        public string FirstName { get; set; }
+        [Display(Name = "Customer Last Name")]
+        public string LastName { get; set; }
+        [Display(Name = "Street Address")]
         public string Address { get; set; }
+        [Display(Name = "City")]
         public string City { get; set; }
+        [Display(Name = "State")]
         public string State { get; set; }
         [Display(Name = "Zip Code")]
         public string Zip { get; set; }

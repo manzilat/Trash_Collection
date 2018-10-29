@@ -25,8 +25,9 @@ namespace Trash_collection.Models
         {
         }
 
-        public object Customer { get; internal set; }
-        public object Customers { get; internal set; }
+        
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
         public static ApplicationDbContext Create()
         {
