@@ -6,27 +6,27 @@ using System.Web.Mvc;
 
 namespace Trash_collection.Controllers
 {
-    public class UserController : Controller
+    public class EmployeeController : Controller
     {
-        // GET: User
+        // GET: Employee
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: User/Details/5
+        // GET: Employee/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: User/Create
+        // GET: Employee/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: User/Create
+        // POST: Employee/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +42,13 @@ namespace Trash_collection.Controllers
             }
         }
 
-        // GET: User/Edit/5
+        // GET: Employee/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: User/Edit/5
+        // POST: Employee/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +64,13 @@ namespace Trash_collection.Controllers
             }
         }
 
-        // GET: User/Delete/5
+        // GET: Employee/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: User/Delete/5
+        // POST: Employee/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

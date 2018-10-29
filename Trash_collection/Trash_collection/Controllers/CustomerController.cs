@@ -9,15 +9,14 @@ namespace Trash_collection.Controllers
 {
     public class CustomerController : Controller
     {
-       public ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Customer
         public ActionResult Index()
         {
-            return View(db.Customer.ToList());
+            var customers = db.Customer.Include(c => c.ApplicationUsers);
+            return View(customers.ToList());
         }
-
-      
 
         // GET: Customer/Details/5
         public ActionResult Details(int id)
