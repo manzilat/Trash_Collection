@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -17,15 +18,18 @@ namespace Trash_collection.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext context;
 
         public AccountController()
         {
+            context = new ApplicationDbContext();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
             SignInManager = signInManager;
+           
         }
 
         public ApplicationSignInManager SignInManager
@@ -51,7 +55,7 @@ namespace Trash_collection.Controllers
                 _userManager = value;
             }
         }
-
+       
         //
         // GET: /Account/Login
         [AllowAnonymous]
@@ -139,6 +143,7 @@ namespace Trash_collection.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+          //  List<SelectListItem>
             return View();
         }
 
