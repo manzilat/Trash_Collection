@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Trash_collection.Models
@@ -64,6 +65,18 @@ namespace Trash_collection.Models
 
     public class RegisterViewModel
     {
+        //[Required]
+        //[Display(Name = "UserName")]
+        //public string UserName { get; set; }
+
+        //[Required]
+        //[Display(Name = "FirstName")]
+        //public string FirstName { get; set; }
+
+        //[Required]
+        //[Display(Name = "LastName")]
+        //public string LastName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -102,6 +115,7 @@ namespace Trash_collection.Models
         public int Zipcode { get; set; }
     }
 
+    
     public class ResetPasswordViewModel
     {
         [Required]

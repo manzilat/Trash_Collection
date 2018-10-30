@@ -195,9 +195,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CalenderController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\CalendersController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -210,6 +210,14 @@
     <Compile Include="Migrations\201810291612452_added tables.cs" />
     <Compile Include="Migrations\201810291612452_added tables.Designer.cs">
       <DependentUpon>201810291612452_added tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810301236488_removed a foreign key.cs" />
+    <Compile Include="Migrations\201810301236488_removed a foreign key.Designer.cs">
+      <DependentUpon>201810301236488_removed a foreign key.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810301410065_Added columns to thecustomer table like pickup start date,end date.cs" />
+    <Compile Include="Migrations\201810301410065_Added columns to thecustomer table like pickup start date,end date.Designer.cs">
+      <DependentUpon>201810301410065_Added columns to thecustomer table like pickup start date,end date.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -281,12 +289,24 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Calenders\Create.cshtml" />
+    <Content Include="Views\Calenders\Delete.cshtml" />
+    <Content Include="Views\Calenders\Details.cshtml" />
+    <Content Include="Views\Calenders\Edit.cshtml" />
+    <Content Include="Views\Calenders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Calender\" />
-    <Folder Include="Views\Customer\" />
-    <Folder Include="Views\Employee\" />
     <Folder Include="Views\NewDatabase\" />
     <Folder Include="Views\Role\" />
     <Folder Include="Views\User\" />
@@ -310,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810291612452_added tables.resx">
       <DependentUpon>201810291612452_added tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810301236488_removed a foreign key.resx">
+      <DependentUpon>201810301236488_removed a foreign key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810301410065_Added columns to thecustomer table like pickup start date,end date.resx">
+      <DependentUpon>201810301410065_Added columns to thecustomer table like pickup start date,end date.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
