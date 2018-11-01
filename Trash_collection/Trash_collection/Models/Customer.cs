@@ -29,10 +29,9 @@ namespace Trash_collection.Models
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
 
-        //Vacation
-
-        [Display(Name = "Vacation, Account on hold")]
-        public bool VacationActivePickupPaused { get; set; }
+        //Vacation Schedule.
+        [Display(Name = "Vacation Active, Account on hold")]
+        public bool VacationPickupPause { get; set; }
         [Display(Name = "Vacation Start ")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
@@ -41,26 +40,45 @@ namespace Trash_collection.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime VacationEnd { get; set; }
-        //pickup's
+
+        //pickup
+
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Pickup Start Date")]
+        public DateTime PickUpDay { get; set; }
+        public virtual ICollection<Calender> PickUpDates { get; set; }
+        [ForeignKey("ApplicationUsers")]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+        public ApplicationUser ApplicationUsers { get; set; }
+        [Display(Name = "Last Viewed Payment")]
+        public string Bill { get; set; }
 
 
-        [Display(Name = "Regular Pickup ")]
-        public bool RegularPickupActive { get; set; }
-        [Display(Name = "Regular Pickup Day of Week")]
-        public DayOfWeek RegularPickupDayOfWeek { get; set; }
-        [Display(Name = "Regular Pickup Start ")]
+
+
+
+        //Special Pickup.
+        [Display(Name = "Special Pickup Request")]
+        public bool SpecialPickupActive { get; set; }
+        [Display(Name = "Special Pickup Day of Week")]
+        public DayOfWeek SpecialPickupDayOfWeek { get; set; }
+        [Display(Name = "Special Pickup Start Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime RegularPickupStartDate { get; set; }
-        [Display(Name = "Regular Pickup End ")]
+        public DateTime SpecialPickupStart { get; set; }
+        [Display(Name = "Special Pickup End Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime RegularPickupEndDate { get; set; }
-        [Display(Name = "Price per Regular Pickup")]
-        public double RegularPickupPrice { get; set; }
+        public DateTime SpecialPickupEnd { get; set; }
+        [Display(Name = "Price per Special Pickup")]
+        public double SpecialPickupPrice { get; set; }
 
 
 
-     
+       
+
     }
 }

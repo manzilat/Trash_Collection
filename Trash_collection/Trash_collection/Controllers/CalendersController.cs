@@ -27,12 +27,12 @@ namespace Trash_collection.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Calender calender = db.Calender.Find(id);
-            if (calender == null)
+            Calender Calender = db.Calender.Find(id);
+            if (Calender == null)
             {
                 return HttpNotFound();
             }
-            return View(calender);
+            return View(Calender);
         }
 
         // GET: Calenders/Create

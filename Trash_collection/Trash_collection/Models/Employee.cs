@@ -14,5 +14,9 @@ namespace Trash_collection.Models
         public string LastName { get; set; }
         public string Email_Id { get; set; }
         public string password { get; set; }
+
+
+
+        
     }
 }

@@ -24,7 +24,7 @@ namespace Trash_collection.Migrations
                   n => n.Name,
                  new Microsoft.AspNet.Identity.EntityFramework.IdentityRole { Name = "Employee" },
                new Microsoft.AspNet.Identity.EntityFramework.IdentityRole { Name = "Customer" });
-                
+
         }
     }
 }
