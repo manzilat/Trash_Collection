@@ -46,15 +46,18 @@ namespace Trash_collection.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Days")] Calender calender)
+        public ActionResult Create([Bind(Include = "Id,Days,PickUpSchedule,PickUpDay,PickUpDates,Bill,RegularPickupActive,RegularPickupDayOfWee,RegularPickupStartDate,RegularPickupEndDate,RegularPickupPrice")] Calender calender)
         {
+
             if (ModelState.IsValid)
             {
                 db.Calender.Add(calender);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", calender);
+
             }
 
+            ViewBag.Email = new SelectList(db.Users, "Id", "Email", calender.Email);
             return View(calender);
         }
 

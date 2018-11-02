@@ -200,6 +200,7 @@
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -226,6 +227,42 @@
     <Compile Include="Migrations\201811011234079_test.cs" />
     <Compile Include="Migrations\201811011234079_test.Designer.cs">
       <DependentUpon>201811011234079_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011807395_added a properies for email and commeted other properties.cs" />
+    <Compile Include="Migrations\201811011807395_added a properies for email and commeted other properties.Designer.cs">
+      <DependentUpon>201811011807395_added a properies for email and commeted other properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011845114_test1.cs" />
+    <Compile Include="Migrations\201811011845114_test1.Designer.cs">
+      <DependentUpon>201811011845114_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011856175_made few changes in customer model and added property for phone numbers.cs" />
+    <Compile Include="Migrations\201811011856175_made few changes in customer model and added property for phone numbers.Designer.cs">
+      <DependentUpon>201811011856175_made few changes in customer model and added property for phone numbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011914250_test2.cs" />
+    <Compile Include="Migrations\201811011914250_test2.Designer.cs">
+      <DependentUpon>201811011914250_test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811011959355_made some changes in the customer controller.cs" />
+    <Compile Include="Migrations\201811011959355_made some changes in the customer controller.Designer.cs">
+      <DependentUpon>201811011959355_made some changes in the customer controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811021227393_doing a test and commenting other properties.cs" />
+    <Compile Include="Migrations\201811021227393_doing a test and commenting other properties.Designer.cs">
+      <DependentUpon>201811021227393_doing a test and commenting other properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811021234529_added prperties in clender moel.cs" />
+    <Compile Include="Migrations\201811021234529_added prperties in clender moel.Designer.cs">
+      <DependentUpon>201811021234529_added prperties in clender moel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811021249546_updated properties for pickups in calender model.cs" />
+    <Compile Include="Migrations\201811021249546_updated properties for pickups in calender model.Designer.cs">
+      <DependentUpon>201811021249546_updated properties for pickups in calender model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811021253442_added an email id for calender model.cs" />
+    <Compile Include="Migrations\201811021253442_added an email id for calender model.Designer.cs">
+      <DependentUpon>201811021253442_added an email id for calender model.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -313,8 +350,7 @@
     <Content Include="Views\Calenders\Details.cshtml" />
     <Content Include="Views\Calenders\Edit.cshtml" />
     <Content Include="Views\Calenders\Index.cshtml" />
-    <Content Include="Views\Customers\PickUpDay.cshtml" />
-    <Content Include="Views\Role\Role.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -351,6 +387,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811011234079_test.resx">
       <DependentUpon>201811011234079_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011807395_added a properies for email and commeted other properties.resx">
+      <DependentUpon>201811011807395_added a properies for email and commeted other properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011845114_test1.resx">
+      <DependentUpon>201811011845114_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011856175_made few changes in customer model and added property for phone numbers.resx">
+      <DependentUpon>201811011856175_made few changes in customer model and added property for phone numbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011914250_test2.resx">
+      <DependentUpon>201811011914250_test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811011959355_made some changes in the customer controller.resx">
+      <DependentUpon>201811011959355_made some changes in the customer controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811021227393_doing a test and commenting other properties.resx">
+      <DependentUpon>201811021227393_doing a test and commenting other properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811021234529_added prperties in clender moel.resx">
+      <DependentUpon>201811021234529_added prperties in clender moel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811021249546_updated properties for pickups in calender model.resx">
+      <DependentUpon>201811021249546_updated properties for pickups in calender model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811021253442_added an email id for calender model.resx">
+      <DependentUpon>201811021253442_added an email id for calender model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

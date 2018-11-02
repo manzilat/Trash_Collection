@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Trash_collection.Models;
 
-namespace Trash_collection.Controllers
+namespace TrashCollector.Models
 {
     public class CustomersController : Controller
     {
@@ -35,6 +35,7 @@ namespace Trash_collection.Controllers
             return View(customer);
         }
 
+    
         // GET: Customers/Create
         public ActionResult Create()
         {
@@ -43,19 +44,19 @@ namespace Trash_collection.Controllers
 
         // POST: Customers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,Address,City,State,Zip,PhoneNumber")] Customer customers)
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,Address,City,State,Zip,PhoneNumber")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                db.Customers.Add(customers);
+                db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(customers);
+            return View(customer);
         }
 
         // GET: Customers/Edit/5
@@ -75,10 +76,10 @@ namespace Trash_collection.Controllers
 
         // POST: Customers/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,Address,City,State,Zip,PhoneNumber")] Customer customer)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Address,City,State,Zip,PhoneNumber")] Customer customer)
         {
             if (ModelState.IsValid)
             {
