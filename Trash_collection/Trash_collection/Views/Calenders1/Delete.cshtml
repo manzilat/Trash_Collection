@@ -1,0 +1,104 @@
+﻿@model Trash_collection.Models.Calender
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Calender</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Days)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Days)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PickUpDay)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PickUpDay)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Bill)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Bill)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RegularPickupActive)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RegularPickupActive)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RegularPickupDayOfWeek)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RegularPickupDayOfWeek)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RegularPickupStartDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RegularPickupStartDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RegularPickupEndDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RegularPickupEndDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RegularPickupPrice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RegularPickupPrice)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

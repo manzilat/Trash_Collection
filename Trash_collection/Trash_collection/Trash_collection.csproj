@@ -195,7 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CalendersController.cs" />
+    <Compile Include="Controllers\CalenderController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -345,12 +345,12 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Calenders\Create.cshtml" />
-    <Content Include="Views\Calenders\Delete.cshtml" />
-    <Content Include="Views\Calenders\Details.cshtml" />
-    <Content Include="Views\Calenders\Edit.cshtml" />
-    <Content Include="Views\Calenders\Index.cshtml" />
     <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Calenders1\Create.cshtml" />
+    <Content Include="Views\Calenders1\Delete.cshtml" />
+    <Content Include="Views\Calenders1\Details.cshtml" />
+    <Content Include="Views\Calenders1\Edit.cshtml" />
+    <Content Include="Views\Calenders1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

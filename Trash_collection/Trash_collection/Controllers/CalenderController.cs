@@ -48,17 +48,31 @@ namespace Trash_collection.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Days,PickUpSchedule,PickUpDay,PickUpDates,Bill,RegularPickupActive,RegularPickupDayOfWee,RegularPickupStartDate,RegularPickupEndDate,RegularPickupPrice")] Calender calender)
         {
-
+            Calender Calender = new Calender();
+            foreach (DateTime day in Generate(calender.Days))
+            {
+                Calender.Days = day;
+                db.Calender.Add(Calender);
+                db.SaveChanges();
+            }
             if (ModelState.IsValid)
             {
-                db.Calender.Add(calender);
-                db.SaveChanges();
-                return RedirectToAction("Details", calender);
-
+                return RedirectToAction("Index");
             }
 
-            ViewBag.Email = new SelectList(db.Users, "Id", "Email", calender.Email);
             return View(calender);
+        }
+
+        static List<DateTime> Generate(DateTime day)
+        {
+            List<DateTime> List = new List<DateTime>();
+            List.Add(day);
+            for (int i = 0; i < 729; i++)
+            {
+                day = day.AddDays(1);
+                List.Add(day);
+            }
+            return List;
         }
 
         // GET: Calenders/Edit/5
@@ -81,7 +95,7 @@ namespace Trash_collection.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Days")] Calender calender)
+        public ActionResult Edit([Bind(Include = "Id,Days,PickUpSchedule,PickUpDay,PickUpDates,Bill,RegularPickupActive,RegularPickupDayOfWee,RegularPickupStartDate,RegularPickupEndDate,RegularPickupPrice")] Calender calender)
         {
             if (ModelState.IsValid)
             {
